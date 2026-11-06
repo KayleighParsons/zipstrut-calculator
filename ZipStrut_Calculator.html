@@ -442,8 +442,8 @@ function renderAcc(){
     var net=a.tradeCost!==null?a.tradeCost*(1-disc):null;
     h+='<div class="assrow"><div class="assleft"><div class="an"><span class="badge bacc" style="margin-right:6px">'+a.code+'</span>'+a.desc+'</div>';
     h+='<div class="ad">Trade: '+(a.tradeCost!==null?'£'+a.tradeCost.toFixed(4):'—')+' | Net: '+(net!==null?'£'+net.toFixed(4):'—')+' | '+a.unit+'</div></div>';
-    h+='<div class="assright"><div class="qc"><button onclick="adjAcc(''+a.code+'',-1)">&minus;</button><span style="min-width:40px">'+accQtys[a.code]+'</span><button onclick="adjAcc(''+a.code+'',1)">+</button></div>';
-    h+='<input type="number" value="'+accQtys[a.code]+'" min="0" style="width:70px;height:32px;padding:0 8px;border:1px solid #ccc;border-radius:4px;font-size:13px;font-family:Arial,sans-serif" onchange="setAcc(''+a.code+'',this.value)"></div></div>';
+    h+='<div class="assright"><div class="qc"><button onclick="adjAcc(\''+a.code+'\',-1)">&minus;</button><span style="min-width:40px">'+accQtys[a.code]+'</span><button onclick="adjAcc(\''+a.code+'\',1)">+</button></div>';
+    h+='<input type="number" value="'+accQtys[a.code]+'" min="0" style="width:70px;height:32px;padding:0 8px;border:1px solid #ccc;border-radius:4px;font-size:13px;font-family:Arial,sans-serif" onchange="setAcc(\''+a.code+'\',this.value)"></div></div>';
   });
   el.innerHTML=h;
 }
